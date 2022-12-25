@@ -29,11 +29,6 @@ main {
   .current {
     display: block;
   }
-
-  .hidden {
-    display: none;
-  }
-
  
   .slide img {
     width: 100%;

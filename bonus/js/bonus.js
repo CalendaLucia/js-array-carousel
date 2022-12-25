@@ -30,54 +30,50 @@ const slides = document.querySelectorAll(".slide");
 let current= 0;
 slides[current].classList.add("current");
 
-// AGGIUNGO LA CLASSE HIDDEN A BUTTON PREV
-const hidden = document.querySelector(".btn-prev");
-hidden.classList.add("hidden");
+
 
 // CREO LE FUNZIONI CHE ACCADRANNO AL CLICK DEI MIEI BOTTONI
 
-// INIZIALIZZO PRIMA NEXT-BUTTON
 const nextSlide = document.querySelector(".btn-next")
+const prevSlide = document.querySelector(".btn-prev")
+
 // CREO LA FUNZIONE AL CLICK DI NEXT BUTTON
 nextSlide.addEventListener('click',
   function () {
     
     slides[current].classList.remove('current');
-    current ++
-    slides[current].classList.add('current');
-
   
-    if ( current == slides.length - 1) {
+    if (current == slides.length - 1) {
+      
+       current = 0;
 
-        prevSlide.classList.add("hidden");
-        nextSlide.classList.add("hidden")
-        
-    }
-        
-    prevSlide.classList.remove("hidden");
+    } else {
+     
+      current++;
+  }
+    slides[current].classList.add('current');
+ 
 
   })
 
-
-// INIZIALIZZO PREV-BUTTON
-  const prevSlide = document.querySelector(".btn-prev")
 
 //   CREO LA FUNZIONE AL CLICK DI PREV-BUTTON
   prevSlide.addEventListener('click',
      function () {
     
     slides[current].classList.remove('current');
-    current --
+
+     if (current == 0) {
+    
+      current = slides.length - 1;
+  }
+  else {
+
+      current--;
+  }
     slides[current].classList.add('current');
-
-    if ( current == 0) {
-
-        prevSlide.classList.add("hidden");
-        
-    }
-
-    nextSlide.classList.remove("hidden")
 
   })
   
+ 
   
