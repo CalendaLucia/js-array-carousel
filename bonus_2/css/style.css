@@ -34,8 +34,8 @@ main {
      position: absolute;
      top: 0px;
      right: 0px;
-     width: 30%;
-     height: 30%;
+     width: 20%;
+     height: 20%;
      z-index: 999;
   }
 
@@ -82,6 +82,8 @@ main {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: right;
+  
   }
 
   
