@@ -24,24 +24,61 @@ main {
   .big-slide {
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    background-color: blueviolet;
-    overflow: auto;
- 
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+  }
+
+  .container {
+     position: absolute;
+     top: 0px;
+     right: 0px;
+     width: 30%;
+     height: 30%;
+     z-index: 999;
   }
 
   .slide {
-    width: 30%;
-    height: 30%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
   }
 
+  .overlay {
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     top: 0px;
+     height: 100%;
+     z-index: 2;
+     background: rgba(39,62,84,0.82);
+ 
+  }
+
+  .hidden, .big-image {
+    display: none;
+  }
+
+
   .current {
+    border: 5px solid yellow;
    
   }
- 
+
+  .current-image {
+    display: block;
+  }
+
+
   .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .big-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -55,7 +92,7 @@ main {
     padding: 0px 5px;
     border: none;
     border-radius: 50%;
-    z-index: 10px;
+    z-index:999;
     cursor: pointer;
     background-color: #fff;
     font-size: 18px;

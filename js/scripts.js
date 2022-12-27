@@ -11,6 +11,7 @@ const images = [
 // INIZIALIZZO IL MIO CONTAINER
 const slider = document.querySelector(".slider");
 
+
 // CREO UN CICLO DELLE MIE IMMAGINI E DO TANTI DIV FIGLI, CON CLASSE SLIDE, AL MIO CONTAINER, TANTE QUANTE SONO LE MIE IMMAGINI.
 
 for (let counter = 0; counter < images.length; counter++) {
@@ -21,7 +22,7 @@ for (let counter = 0; counter < images.length; counter++) {
                             <img src="${images[counter]}">
                          </div>`;
   
-    
+  
 }
 
 // PRENDO TUTTE LE SLIDE CREATE E AGGIUNGO SOLO ALL' INDICE 0, OVVERO LA PRIMA SLIDE, LA CLASSE CURRENT, DANDOLE VALORE "O".
